@@ -3,16 +3,16 @@ module "vpc" {
     version = "~> 6.0"
 
     project_id   = var.project
-    network_name = "example-vpc"
+    network_name = "terra-firm"
     routing_mode = "GLOBAL"
 
-    subnets = [
-        {
-            subnet_name   = "gaurav-subnet"
-            subnet_ip     = "10.100.10.0/24"
-            subnet_region = var.region
-        }
-    ]
+subnets = [
+  {
+    subnet_name   = "gaurav-subnet"
+    subnet_ip     = "10.100.10.0/24"
+    subnet_region = var.region
+  }
+]
 
     secondary_ranges = {
         subnet-01 = [
