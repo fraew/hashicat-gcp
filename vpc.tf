@@ -1,10 +1,10 @@
-module "vpc" {
-    source  = "terraform-google-modules/network/google"
-    version = "~> 3.0"
+module "network" {
+  source  = "app.terraform.io/Terra-firm/network/google"
+  version = "3.4.0"
+  # insert required variables here
 
     project_id   = var.project
     network_name = "terra-firm"
-    routing_mode = "GLOBAL"
 
   subnets = [
     {
